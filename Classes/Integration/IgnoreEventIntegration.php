@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Networkteam\SentryClient\Integration;
 
 use Doctrine\DBAL\Exception\ConnectionException;
+use Networkteam\SentryClient\IgnoreMessageTrait;
 use Networkteam\SentryClient\Service\ConfigurationService;
-use Networkteam\SentryClient\Trait\IgnoreMessage;
 use Sentry\Event;
 use Sentry\Integration\IntegrationInterface;
 use Sentry\SentrySdk;
@@ -18,7 +18,7 @@ use TYPO3\CMS\Core\Http\PropagateResponseException;
 
 final class IgnoreEventIntegration implements IntegrationInterface
 {
-    use IgnoreMessage;
+    use IgnoreMessageTrait;
 
     public function setupOnce(): void
     {

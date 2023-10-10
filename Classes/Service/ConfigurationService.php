@@ -23,7 +23,10 @@ class ConfigurationService
 
     const DISABLE_DATABASE_LOG = 'disableDatabaseLogging';
 
-    protected static function getExtensionConfiguration(string $path): mixed
+    /**
+     * @return mixed|null
+     */
+    protected static function getExtensionConfiguration(string $path)
     {
         return $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sentry_client'][$path] ?? null;
     }

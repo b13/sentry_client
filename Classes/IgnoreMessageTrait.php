@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-namespace Networkteam\SentryClient\Trait;
+namespace Networkteam\SentryClient;
 
 use Networkteam\SentryClient\Service\ConfigurationService;
 
-trait IgnoreMessage
+trait IgnoreMessageTrait
 {
     protected function shouldIgnoreMessage(string $message): bool
     {

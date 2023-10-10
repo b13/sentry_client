@@ -4,7 +4,6 @@ namespace Networkteam\SentryClient;
 
 use Networkteam\SentryClient\Service\ConfigurationService;
 use Networkteam\SentryClient\Service\SentryService;
-use Networkteam\SentryClient\Trait\IgnoreMessage;
 use Sentry\Event;
 use Sentry\Stacktrace;
 use Sentry\State\Scope;
@@ -14,7 +13,7 @@ use function Sentry\withScope;
 
 class SentryLogWriter extends AbstractWriter
 {
-    use IgnoreMessage;
+    use IgnoreMessageTrait;
 
     protected const SOURCE_TAG = 'source';
 
